@@ -23,12 +23,16 @@
 }
 
 html {
+  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 24px);
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
+  overflow-x: clip;
   background: var(--paper);
   color: var(--ink);
   font-family: Inter, Manrope, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -1529,6 +1533,10 @@ footer {
   .hero-visual {
     min-height: 480px;
     margin-top: 12px;
+  }
+
+  .visual-grid {
+    right: 0;
   }
 
   .build-card {
