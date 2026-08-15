@@ -1,4 +1,4 @@
-# Andrei Bujor — Personal portfolio
+# Andrei Bujor - Personal portfolio
 
 Site personal bilingv (RO/EN), responsive și fără dependențe externe.
 
