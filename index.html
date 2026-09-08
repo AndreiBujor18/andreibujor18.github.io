@@ -7,7 +7,7 @@
       name="description"
       content="Portofoliul lui Andrei Bujor, inginer în calculatoare pasionat de dezvoltare software, aplicații mobile, realitate augmentată și sisteme digitale."
     />
-    <meta name="theme-color" content="#071b33" />
+    <meta name="theme-color" content="#f6f2e9" />
     <link rel="canonical" href="https://andreibujor.ro/" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://andreibujor.ro/" />
@@ -20,6 +20,12 @@
     />
     <title>Andrei Bujor - Inginer în calculatoare</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -66,10 +72,10 @@
           <p class="eyebrow"><span class="status-dot"></span><span data-i18n="availability">Deschis oportunităților junior în IT</span></p>
           <h1>
             <span data-i18n="heroHello">Salut, sunt Andrei.</span>
-            <span class="hero-accent" data-i18n="heroTitle">Construiesc software care duce ideile în lumea reală.</span>
+            <span class="hero-accent" data-i18n="heroTitle">Construiesc software pentru lumea reală.</span>
           </h1>
           <p class="hero-lead" data-i18n="heroLead">
-            Inginer în calculatoare interesat de dezvoltare software, aplicații mobile, realitate augmentată și sisteme digitale - cu atenție pentru lucrurile care funcționează clar, nu doar arată bine.
+            Lucrez cu C#, Unity, Python și sisteme digitale. Cel mai recent am construit navigare AR pentru Campus USV și un calculator modular în Verilog.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projects">
@@ -91,46 +97,37 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Rezumat profesional" data-i18n-aria-label="summaryAria">
-          <div class="visual-grid" aria-hidden="true"></div>
-          <svg class="route-line" viewBox="0 0 540 520" aria-hidden="true">
-            <path d="M72 410 C120 320, 168 372, 215 282 S315 232, 350 154 S420 88, 474 52" />
-            <circle cx="72" cy="410" r="7" />
-            <circle cx="215" cy="282" r="7" />
-            <circle cx="350" cy="154" r="7" />
-            <circle cx="474" cy="52" r="9" class="route-end" />
+        <div class="hero-visual reveal" aria-label="Traseu vizual între navigarea AR și proiectarea digitală" data-i18n-aria-label="summaryAria">
+          <div class="schematic-head">
+            <span>01</span>
+            <span data-i18n="schematicLabel">TRASEU / SEMNAL</span>
+          </div>
+
+          <svg class="route-line" viewBox="0 0 520 520" aria-hidden="true">
+            <path class="route-path" d="M54 438 C54 332, 158 351, 158 258 S266 188, 266 116 C266 74, 302 62, 344 62" />
+            <path class="circuit-path" d="M344 62 H412 V137 H468 M412 137 V229 H350 V318 H464 M350 318 V416 H425" />
+            <circle cx="54" cy="438" r="8" />
+            <circle cx="158" cy="258" r="7" />
+            <circle cx="266" cy="116" r="7" />
+            <circle cx="344" cy="62" r="8" />
+            <circle cx="468" cy="137" r="6" />
+            <circle cx="464" cy="318" r="6" />
+            <circle cx="425" cy="416" r="6" />
           </svg>
 
-          <div class="build-card">
-            <div class="build-card-head">
-              <span>andrei.build</span>
-              <span class="window-dots"><i></i><i></i><i></i></span>
-            </div>
-            <div class="build-status">
-              <span class="code-key">status</span><span>:</span>
-              <span class="code-value" data-i18n="buildStatus">„gata de următoarea provocare”</span>
-            </div>
-            <div class="build-focus">
-              <span class="tiny-label" data-i18n="currentFocus">DIRECȚII ACTUALE</span>
-              <strong>Software · Mobile · AR · AI</strong>
-            </div>
-            <div class="build-stack">
-              <span>C#</span><span>Python</span><span>Unity</span><span>SQL</span><span>Git</span>
-            </div>
+          <div class="schematic-note schematic-note-route">
+            <span data-i18n="schematicRouteLabel">PROIECT MOBIL</span>
+            <strong>Campus USV</strong>
+            <small data-i18n="schematicRouteDetail">navigare 2D + AR</small>
           </div>
 
-          <div class="metric metric-a">
-            <strong>C#</strong>
-            <span data-i18n="metricUnity">dezvoltare Unity</span>
+          <div class="schematic-note schematic-note-signal">
+            <span data-i18n="schematicSignalLabel">SISTEM DIGITAL</span>
+            <strong>Verilog</strong>
+            <small>ALU · memorie · UART</small>
           </div>
-          <div class="metric metric-b">
-            <strong>AR</strong>
-            <span data-i18n="metricAr">navigare mobilă</span>
-          </div>
-          <div class="metric metric-c">
-            <strong>RO/EN</strong>
-            <span data-i18n="metricBilingual">interfață bilingvă</span>
-          </div>
+
+          <p class="schematic-coordinate">47.64783 N / 26.24240 E</p>
         </div>
 
         <div class="scroll-hint" aria-hidden="true">
@@ -332,7 +329,7 @@
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
           <div class="contact-meta">
-            <span>Fălticeni · Suceava · România</span>
+            <span data-i18n="location">Suceava · România</span>
             <div><a href="https://github.com/AndreiBujor18" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/andreibujor18/" target="_blank" rel="noreferrer">LinkedIn</a></div>
           </div>
         </div>

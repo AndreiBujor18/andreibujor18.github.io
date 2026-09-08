@@ -13,17 +13,16 @@ const translations = {
     navContact: "Contact",
     availability: "Deschis oportunităților junior în IT",
     heroHello: "Salut, sunt Andrei.",
-    heroTitle: "Construiesc software care duce ideile în lumea reală.",
-    heroLead: "Inginer în calculatoare interesat de dezvoltare software, aplicații mobile, realitate augmentată și sisteme digitale - cu atenție pentru lucrurile care funcționează clar, nu doar arată bine.",
+    heroTitle: "Construiesc software pentru lumea reală.",
+    heroLead: "Lucrez cu C#, Unity, Python și sisteme digitale. Cel mai recent am construit navigare AR pentru Campus USV și un calculator modular în Verilog.",
     viewProjects: "Vezi proiectele",
     downloadCv: "Descarcă CV-ul",
     profilesAria: "Profiluri profesionale",
-    summaryAria: "Rezumat profesional",
-    buildStatus: "„gata de următoarea provocare”",
-    currentFocus: "DIRECȚII ACTUALE",
-    metricUnity: "dezvoltare Unity",
-    metricAr: "navigare mobilă",
-    metricBilingual: "interfață bilingvă",
+    summaryAria: "Traseu vizual între navigarea AR și proiectarea digitală",
+    schematicLabel: "TRASEU / SEMNAL",
+    schematicRouteLabel: "PROIECT MOBIL",
+    schematicRouteDetail: "navigare 2D + AR",
+    schematicSignalLabel: "SISTEM DIGITAL",
     scroll: "Descoperă",
     projectsKicker: "PROIECTE SELECTATE",
     projectsTitle: "Lucruri pe care le-am construit.",
@@ -77,6 +76,7 @@ const translations = {
     contactKicker: "CONTACT",
     contactTitle: "Ai un proiect, un rol sau pur și simplu o idee bună?",
     contactBody: "Hai să discutăm. Sunt deschis oportunităților junior și colaborărilor în care pot construi, învăța și contribui concret.",
+    location: "Suceava · România",
     backTop: "Înapoi sus"
   },
   en: {
@@ -93,17 +93,16 @@ const translations = {
     navContact: "Contact",
     availability: "Open to junior opportunities in IT",
     heroHello: "Hi, I'm Andrei.",
-    heroTitle: "I build software that brings ideas into the real world.",
-    heroLead: "Computer engineer interested in software development, mobile applications, augmented reality and digital systems - focused on things that work clearly, not only look good.",
+    heroTitle: "I build software for the real world.",
+    heroLead: "I work with C#, Unity, Python and digital systems. Most recently, I built AR navigation for Campus USV and a modular calculator in Verilog.",
     viewProjects: "Explore my work",
     downloadCv: "Download CV (RO)",
     profilesAria: "Professional profiles",
-    summaryAria: "Professional summary",
-    buildStatus: "\"ready for the next challenge\"",
-    currentFocus: "CURRENT FOCUS",
-    metricUnity: "Unity development",
-    metricAr: "mobile navigation",
-    metricBilingual: "bilingual interface",
+    summaryAria: "Visual route between AR navigation and digital design",
+    schematicLabel: "ROUTE / SIGNAL",
+    schematicRouteLabel: "MOBILE PROJECT",
+    schematicRouteDetail: "2D + AR navigation",
+    schematicSignalLabel: "DIGITAL SYSTEM",
     scroll: "Explore",
     projectsKicker: "SELECTED WORK",
     projectsTitle: "Things I've built.",
@@ -157,6 +156,7 @@ const translations = {
     contactKicker: "CONTACT",
     contactTitle: "Have a project, a role or simply a good idea?",
     contactBody: "Let's talk. I'm open to junior opportunities and collaborations where I can build, learn and make a concrete contribution.",
+    location: "Suceava · Romania",
     backTop: "Back to top"
   }
 };
@@ -222,23 +222,6 @@ navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 760) closeMenu();
-});
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12, rootMargin: "0px 0px -40px" }
-);
-
-document.querySelectorAll(".reveal").forEach((element) => {
-  if (reducedMotion) element.classList.add("is-visible");
-  else revealObserver.observe(element);
 });
 
 const sections = [...document.querySelectorAll("main section[id]")];

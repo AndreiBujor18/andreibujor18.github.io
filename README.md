@@ -1,6 +1,11 @@
 # Andrei Bujor - Personal portfolio
 
-Site personal bilingv (RO/EN), responsive și fără dependențe externe.
+Site personal bilingv (RO/EN), responsive și construit fără framework-uri.
+
+Direcția vizuală combină un stil editorial cu un traseu care se transformă
+în circuit, inspirat de proiectele Campus USV și Calculator Binar Verilog.
+Tipografia folosește familiile Source Serif 4 și IBM Plex, încărcate prin
+Google Fonts.
 
 Site public: [andreibujor.ro](https://andreibujor.ro/)
 
