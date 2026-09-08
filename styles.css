@@ -101,7 +101,7 @@ img {
   top: 0;
   height: var(--header-height);
   border-bottom: 1px solid var(--line);
-  background: rgba(246, 242, 233, 0.97);
+  background: var(--paper);
 }
 
 .nav {
@@ -676,6 +676,7 @@ html[lang="en"] .toggle-track span {
 .campus-showcase {
   position: relative;
   min-height: 548px;
+  overflow: hidden;
   border: 1px solid var(--ink);
   background: var(--navy);
 }
@@ -695,11 +696,11 @@ html[lang="en"] .toggle-track span {
 }
 
 .campus-showcase::after {
-  right: -10px;
-  bottom: -10px;
-  z-index: 0;
-  width: 44%;
-  height: 46%;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+  width: 6px;
+  height: 92px;
   background: var(--accent);
 }
 
@@ -719,7 +720,7 @@ html[lang="en"] .toggle-track span {
 }
 
 .phone-shot-map {
-  top: 108px;
+  bottom: 30px;
   left: 6%;
   transform: rotate(-3deg);
 }
@@ -732,8 +733,9 @@ html[lang="en"] .toggle-track span {
 }
 
 .phone-shot-ar {
-  top: 120px;
-  right: 6%;
+  right: 7%;
+  bottom: 30px;
+  width: 30%;
   transform: rotate(3deg);
 }
 
@@ -1596,12 +1598,18 @@ footer {
     left: 14px;
   }
 
+  .campus-showcase::after {
+    top: 14px;
+    right: 14px;
+    height: 70px;
+  }
+
   .phone-shot {
     width: 38%;
   }
 
   .phone-shot-map {
-    top: 92px;
+    bottom: 18px;
     left: 3%;
   }
 
@@ -1610,8 +1618,9 @@ footer {
   }
 
   .phone-shot-ar {
-    top: 98px;
     right: 3%;
+    bottom: 18px;
+    width: 34%;
   }
 
   .project-secondary {
