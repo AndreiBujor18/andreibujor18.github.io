@@ -513,6 +513,18 @@ html[lang="en"] .toggle-track span {
 .schematic-note-signal {
   right: 2%;
   bottom: 14%;
+  padding-left: 18px;
+  border-left: 0;
+}
+
+.schematic-note-signal::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 3px;
+  background: var(--accent);
+  content: "";
 }
 
 .schematic-note span {
@@ -1632,6 +1644,11 @@ footer {
 
   .schematic-note-signal {
     bottom: 9%;
+    padding-left: 13px;
+  }
+
+  .schematic-note-signal::before {
+    left: 5px;
   }
 
   .schematic-coordinate {
