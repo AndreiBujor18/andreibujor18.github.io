@@ -521,13 +521,26 @@ html[lang="en"] .toggle-track span {
 
 .schematic-note-signal {
   right: 2%;
-  bottom: 14%;
+  bottom: 19%;
   padding-left: 18px;
   border-left: 0;
   background: transparent;
   transform: translateX(7px);
 }
 
+.schematic-note-copy {
+  display: grid;
+}
+
+.schematic-note-route .schematic-note-copy {
+  clip-path: inset(100% 0 0 0);
+  animation: reveal-note-copy 420ms 600ms linear forwards;
+}
+
+.schematic-note-signal .schematic-note-copy {
+  clip-path: inset(0 0 100% 0);
+  animation: reveal-note-copy 390ms 2.92s linear forwards;
+}
 
 .schematic-note span {
   color: var(--ink-soft);
@@ -586,6 +599,12 @@ html[lang="en"] .toggle-track span {
 @keyframes draw-note-line {
   to {
     transform: scaleY(1);
+  }
+}
+
+@keyframes reveal-note-copy {
+  to {
+    clip-path: inset(0);
   }
 }
 
@@ -1656,7 +1675,8 @@ footer {
   }
 
   .schematic-coordinate {
-    right: 0;
+    right: 3%;
+    bottom: -28px;
     font-size: 9px;
   }
 
@@ -1737,6 +1757,18 @@ footer {
   .footer-inner {
     min-height: 86px;
   }
+
+  .contact-email {
+  gap: 12px;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  font-size: clamp(1.05rem, 5.2vw, 1.2rem);
+}
+
+.contact-email svg {
+  width: 22px;
+}
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1749,13 +1781,15 @@ footer {
     transition-duration: 0.01ms !important;
   }
 
-  .route-path,
-  .circuit-path,
-  .route-node,
-  .schematic-note-route::before {
-    animation-delay: 0ms !important;
-    opacity: 1;
-    stroke-dashoffset: 0;
-    transform: none;
-  }
+    .route-path,
+    .circuit-path,
+    .route-node,
+    .schematic-note-route::before,
+    .schematic-note-copy {
+      animation-delay: 0ms !important;
+      opacity: 1;
+      clip-path: none;
+      stroke-dashoffset: 0;
+      transform: none;
+    }
 }
