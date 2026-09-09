@@ -19,7 +19,7 @@
       content="Dezvoltare software, aplicații mobile, AR și sisteme digitale."
     />
     <title>Andrei Bujor - Inginer în calculatoare</title>
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml" sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -104,15 +104,21 @@
           </div>
 
           <svg class="route-line" viewBox="0 0 520 520" aria-hidden="true">
-            <path class="route-path" d="M54 438 C54 332, 158 351, 158 258 S266 188, 266 116 C266 74, 302 62, 344 62" />
-            <path class="circuit-path" d="M344 62 H412 V137 H468 M412 137 V229 H350 V318 H464 M350 318 V416 H425" />
-            <circle cx="54" cy="438" r="8" />
-            <circle cx="158" cy="258" r="7" />
-            <circle cx="266" cy="116" r="7" />
-            <circle cx="344" cy="62" r="8" />
-            <circle cx="468" cy="137" r="6" />
-            <circle cx="464" cy="318" r="6" />
-            <circle cx="425" cy="416" r="6" />
+            <path
+              class="route-path"
+              pathLength="1"
+              d="M54 438 C54 332, 158 351, 158 258 S266 188, 266 116 C266 74, 302 62, 344 62"
+            />
+            <path class="circuit-path circuit-spine" pathLength="1" d="M344 62 H412 V229 H350 V318 V416 H425" />
+            <path class="circuit-path circuit-branch circuit-branch-top" pathLength="1" d="M412 137 H468" />
+            <path class="circuit-path circuit-branch circuit-branch-middle" pathLength="1" d="M350 318 H464" />
+            <circle class="route-node route-node-start" cx="54" cy="438" r="8" />
+            <circle class="route-node route-node-one" cx="158" cy="258" r="7" />
+            <circle class="route-node route-node-two" cx="266" cy="116" r="7" />
+            <circle class="route-node route-node-junction" cx="344" cy="62" r="8" />
+            <circle class="route-node route-node-top" cx="468" cy="137" r="6" />
+            <circle class="route-node route-node-middle" cx="464" cy="318" r="6" />
+            <circle class="route-node route-node-end" cx="425" cy="416" r="6" />
           </svg>
 
           <div class="schematic-note schematic-note-route">

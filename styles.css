@@ -430,22 +430,69 @@ html[lang="en"] .toggle-track span {
 
 .route-path {
   stroke: var(--signal);
-  stroke-dasharray: 780;
-  stroke-dashoffset: 780;
-  animation: draw-path 1.5s 120ms ease-out forwards;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-path 1.6s 120ms linear forwards;
 }
 
 .circuit-path {
   stroke: var(--accent);
-  stroke-dasharray: 720;
-  stroke-dashoffset: 720;
-  animation: draw-path 1.5s 650ms ease-out forwards;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.circuit-spine {
+  animation: draw-path 1.55s 1.72s linear forwards;
+}
+
+.circuit-branch-top {
+  animation: draw-path 320ms 2.12s linear forwards;
+}
+
+.circuit-branch-middle {
+  animation: draw-path 460ms 2.78s linear forwards;
 }
 
 .route-line circle {
   fill: var(--paper);
   stroke: var(--ink);
   stroke-width: 2;
+}
+
+.route-node {
+  opacity: 0;
+  transform: scale(0.65);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: reveal-node 120ms linear forwards;
+}
+
+.route-node-start {
+  animation-delay: 80ms;
+}
+
+.route-node-one {
+  animation-delay: 680ms;
+}
+
+.route-node-two {
+  animation-delay: 1.2s;
+}
+
+.route-node-junction {
+  animation-delay: 1.72s;
+}
+
+.route-node-top {
+  animation-delay: 2.42s;
+}
+
+.route-node-middle {
+  animation-delay: 3.24s;
+}
+
+.route-node-end {
+  animation-delay: 3.27s;
 }
 
 .schematic-note {
@@ -519,6 +566,13 @@ html[lang="en"] .toggle-track span {
 @keyframes draw-path {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes reveal-node {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -1672,5 +1726,14 @@ footer {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .route-path,
+  .circuit-path,
+  .route-node {
+    animation-delay: 0ms !important;
+    opacity: 1;
+    stroke-dashoffset: 0;
+    transform: none;
   }
 }
